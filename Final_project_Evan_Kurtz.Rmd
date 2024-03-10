@@ -46,3 +46,27 @@ My data was downloaded from Kaggle where it was uploaded by a user named Aayush 
 ```{r}
 glimpse(twitch)
 ```
+
+***3. Data analysis plan***
+
+**A.** The outcome variables are the amount of time people spend watching (watch time) and the amount of followers that a streamer gains in a year. And the predictor variable is the amount of time a streamer spends live (stream time).
+
+**B.** There are no comparison groups.
+
+
+**C.** Data analysis.
+```{r}
+summary(twitch)
+
+ggplot(data = twitch, mapping = aes(x = Stream.time.minutes.,y = Watch.time.Minutes.)) + 
+  geom_point()
+```
+
+The summary statistics I printed out help to give me a broad overview of the averages, extremes, types, and amounts of data that I have. I have a better understanding of it now. 
+
+The plot I made appears to not have a strong correlation between the amount of time streamed and the amount of time a streamer is watched, but I'll need to find exact numbers to know for sure. Perhaps, I will need to find a better variable to compare to the amount of time streamed in the end. 
+
+**D.** I believe that creating a proportion of streamed minutes to watched minutes will be useful in seeing if the two are correlated. To get accurate data on whether stream time and watch time have a positive correlation, I may also need to remove the the upper extremes of the data to understand the more common trends. 
+
+
+**E.** My hypothesis is that the more a streamer was live on Twitch, the more watch time they received from viewers. To know if this is true or not, I will need to find that there is a positive correlation between the two variables. The same applies to the question of whether stream time has a positive correlation with the number of followers gained in a year. 
