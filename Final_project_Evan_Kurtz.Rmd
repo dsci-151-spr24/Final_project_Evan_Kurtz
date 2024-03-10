@@ -6,6 +6,17 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
+library(tidyverse)
+twitch <- read.csv("twitchdata-update.csv")
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+
+**I want to do a basic analysis of the data of Twitch streamers from 2019. My basic question is, who dominated the Twitch space in 2019? I'll probably look at the top 25 or 50 steamers in each category. Who was most popular streamer in terms of followers? Who was watched the most in terms of watch time? Who is the most popular mature streamer? Who has grown the most in terms of followers? Perhaps, I'll also have a quick look at the least popular streamers.**
+
+**My data was downloaded from Kaggle where it was uploaded by a user named Aayush Mishra. Mishra doesn't say, but I suspect the data was taken directly from Twitch.com itself. Each row is the name of a different streamer with there being 1000 in total. There are 11 columns in total: channel, watch time(minutes), streamtime(minutes), peak viewers, average viewers, followers, followers gained, views gained, partnered, mature, and language.**
+
+```{r}
+glimpse(twitch)
+```
