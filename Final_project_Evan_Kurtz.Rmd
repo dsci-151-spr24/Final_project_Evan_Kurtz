@@ -11,11 +11,37 @@ twitch <- read.csv("twitchdata-update.csv")
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+***1. Introduction***
 
+My question is, what is the ratio of stream time to watch time? Basically, I want to know: how does the amount of time a streamer spends streaming affect how much time people spend watching them? A second interesting question is: how does the time spent streaming affect the amount of followers gained that year? In the end, how important is it that streamers spend much of their time streaming to be successful?**
 
-**I want to do a basic analysis of the data of Twitch streamers from 2019. My basic question is, who dominated the Twitch space in 2019? I'll probably look at the top 25 or 50 steamers in each category. Who was most popular streamer in terms of followers? Who was watched the most in terms of watch time? Who is the most popular mature streamer? Who has grown the most in terms of followers? Perhaps, I'll also have a quick look at the least popular streamers.**
+My data was downloaded from Kaggle where it was uploaded by a user named Aayush Mishra. Mishra doesn't say, but I suspect the data was taken directly from Twitch.com itself. Each row is the name of a different streamer with there being 1000 in total. There are 11 columns in total: channel, watch time(minutes), streamtime(minutes), peak viewers, average viewers, followers, followers gained, views gained, partnered, mature, and language.**
 
-**My data was downloaded from Kaggle where it was uploaded by a user named Aayush Mishra. Mishra doesn't say, but I suspect the data was taken directly from Twitch.com itself. Each row is the name of a different streamer with there being 1000 in total. There are 11 columns in total: channel, watch time(minutes), streamtime(minutes), peak viewers, average viewers, followers, followers gained, views gained, partnered, mature, and language.**
+***2. Data***
+
+**Codebook**
+
+**Channel:** the name of the Twitch streamer.
+
+**Watch time(minutes):** the amount of minutes users have watched a particular streamer.
+
+**Stream time(minutes):** the amount of minutes that a particular streamer was live.
+
+**Peak viewers:** the maximum amount of viewers that a streamer had at one time in 2019.
+
+**Average viewers:** the mean amount of viewers that a streamer had when live. 
+
+**Followers:** the amount of followers a streamer had at the end of 2019.
+
+**Followers gained:** the amount of followers that a streamer gained during 2019.
+
+**Views gained:** the amount of views that a streamer gained in 2019. 
+
+**Partnered:** whether a particular streamer is a Twitch partner. A program for highly successful streamers that gives them benefits for earning income from Twitch.
+
+**Mature:** whether a Twitch streamer includes content for mature audiences or not according to their label. 
+
+**Language:** the language that a Twitch streamer speaks on stream. 
 
 ```{r}
 glimpse(twitch)
